@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Task-Manager</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Montserrat:400,700|Raleway" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<link rel="shortcut icon" href="img/todo.png" />
+</head>
+
+ 
+  
+
+<body>
+    
+  <div id='fully-loaded' class='hide'>
+    <div class="bg-opacity">
+    <!-- =============== NAVBAR =============== -->
+      <nav class="navbar navbar-expand-xl navbar-light fixed-top">
+        <div class="container"> 
+          <a href="/" class="navbar-brand"><span style="font-family: task; font-style: text; font-weight: bold"></span>Task-Manager</a>        <ul class="nav navbar-nav text ml-auto">
+              <li class="nav-item"><a class="nav-link" href="/"><b>Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav justify-content-center d-flex ml-auto text">
+              <li class="nav-item"><a class="nav-link" id="navbarLogin" href="/login.html">Log in</a></li>
+              <span class="d-flex"> <!-- stops button below from filling container width -->
+                <button id="navbarRegister" type="button" class="btn btn-success" onclick="location.href = '/signup.html';">SIGN UP</button>
+              </span>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    
+      <div class="demo_wrap">
+        <img src="img/back.jpeg">
+      </div>
+    
+    <script src="/js/app.js"></script>
+</body>
+
+
+</html>

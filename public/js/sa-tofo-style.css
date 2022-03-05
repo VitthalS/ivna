@@ -1,0 +1,66 @@
+/* Todo Task Manager custom styles */
+
+.sa-font-serif {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sa-no-focus-outline:focus:not(:focus-visible) {		/* Instead of just :focus, From: https://css-tricks.com/the-focus-visible-trick/ */
+	outline: none;
+} 
+
+.sa-no-pointer-events {
+	pointer-events: none;
+}
+
+.sa-height-25px {
+	height: 25px;
+}
+
+.sa-height-50px {
+	height: 50px;
+}
+
+.sa-height-75px {
+	height: 75px;
+}
+
+.sa-height-100px {
+	height: 100px;
+}
+
+.sa-width-10 {
+	width: 10%;
+}
+
+.sa-width-15 {
+	width: 15%;
+}
+
+.sa-width-20 {
+	width: 20%;
+}
+
+.sa-width-30 {
+	width: 30%;
+}
+
+.sa-width-40 {
+	width: 40%;
+}
+
+.sa-width-50 {
+	width: 50%;
+}
+
+.sa-width-60 {
+	width: 60%;
+}
+
+.sa-text-line-through {
+	text-decoration: line-through;
+}
+
+.sa-text-no-line-through {
+	text-decoration: none;
+}
+

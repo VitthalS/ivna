@@ -1,0 +1,57 @@
+{{> header}}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  
+  <body>
+     
+  <form onsubmit='return onSubmit(this)'>
+				<div class="mt-2">
+					<label>Name</label><br/>
+					<input type="text" name="name" class="w-full border border-black rounded outline-none p-2">
+				</div>
+				<div class="mt-2">
+					<label>Age</label><br/>
+					<input type="text" name="age" class="w-full border border-black rounded outline-none p-2">
+				</div>
+				<div class="mt-2">
+					<label>About</label><br/>
+					<input type="text" name="About" class="w-full border border-black rounded outline-none p-2">
+				</div>
+				<div class="mt-4 flex justify-end">
+					<button class="uppercase px-8 py-2 rounded border border-green-600 text-green-600 max-w-max shadow-sm hover:shadow-lg" type="submit">Submit</button>
+				</div>
+			</form>
+<script>
+  <script type="text/javascript"> 
+				function onSubmit( form ){
+					var data = $(form).serializeArray();// No Longer used
+					var formObject = { profile : {} };
+					$.each(data,
+					    function(i, v) {
+					        formObject.profile[v.name] = v.value;
+					    });
+					$.ajax({
+					    type: 'POST',
+					    url: '/api/v2/profile',
+					    data: JSON.stringify(formObject), // or JSON.stringify ({name: 'test'}),
+					    success: function(data, textStatus, jqXHR) { 
+					    	document.write(jqXHR.responseText); 
+					    },
+					    contentType: "application/json",
+					    dataType: 'html'
+					});
+					return false; 
+				}
+
+			</script>
+</script>
+  </body>
+</html>
+
+

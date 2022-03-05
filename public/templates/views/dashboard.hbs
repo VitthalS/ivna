@@ -1,0 +1,112 @@
+{{> header}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../js/sa-tofo-style.css">
+	<title>Todo Task Manager</title>
+</head>
+<body>
+<div class="w3-content" id="page-container"> <!-- required to centre everything -->
+
+  {{!-- <div class="w3-bar w3-theme" id="nav-bar">
+		<a class="w3-button w3-bar-item w3-theme-d1 w3-right" id="btn-logout">Logout</a>
+	</div> --}}
+	<div class="w3-container w3-large w3-center w3-theme-l3" id="header">
+		<h2 class="w3-wide w3-xxlarge sa-font-serif">Task-Manager</h2>
+		<p><i>Add your todo's here!</i></p>
+	</div>
+	<div class="w3-center" id="instructions"> <!-- Instructions only show when there's no Todo Items -->
+		<!-- <span class="fa fa-list-alt w3-jumbo w3-margin-top"></span> -->
+		<p>
+			<strong id="greeting-text">Quicly add your first task and check it off!</strong>
+		</p>
+	</div>
+	<div class="w3-center" id="messages">
+		<p id="message-1"></p>
+		<p id="message-2"></p>
+		<p id="message-3"></p>
+	</div>
+
+ 	<form class="w3-container w3-center w3-padding-24" id="input-form">	<!-- Hidden if there's no Todo Items -->
+		<input type="text" id="input-field" class="sa-width-30" placeholder="Add something todo...">
+		<button type="submit" class="sa-no-focus-outline w3-border-0 w3-theme w3-hover-grey w3-large"><span class="fa fa-plus"></span></button>
+	</form>
+	
+	<div class="w3-row w3-small">
+		<div class="w3-col w3-container w3-left sa-width-20"></div> <!-- left responsive padding -->
+		<form class="w3-padding-16 w3-rest w3-hide" id="filter-sort-form">
+			<div id="filter-tasks">
+				<span class="sa-min-width-4rem">Show:</span>
+				<input type="radio" id="show-all" class="w3-radio" name="filter" value="all" checked>
+				<label for="show-all">All</label>
+				<input type="radio" id="show-true" class="w3-radio w3-margin-left" name="filter" value="true">
+				<label for="show-true">Completed</label>
+				<input type="radio" id="show-false" class="w3-radio w3-margin-left" name="filter" value="false">
+				<label for="show-false">Incomplete</label>
+			</div>
+			<br>
+			<div id="sort-tasks">
+				<span class="sa-min-width-4rem">Sort by:</span>
+				<input type="radio" id="sort-unsorted" class="w3-radio" name="sortBy" value="unsorted" checked>
+				<label for="sort-unsorted">Unsorted</label>
+				<input type="radio" id="sort-completed" class="w3-radio w3-margin-left" name="sortBy" value="completed">
+				<label for="sort-completed">Completed</label>  
+				<input type="radio" id="sort-description" class="w3-radio w3-margin-left" name="sortBy" value="description">
+				<label for="sort-description">Description</label>
+				<input type="radio" id="sort-created" class="w3-radio w3-margin-left" name="sortBy" value="createdAt">
+				<label for="sort-created">Date Created</label>
+				<input type="radio" id="sort-updated" class="w3-radio w3-margin-left" name="sortBy" value="updatedAt">
+				<label for="sort-updated">Last Updated</label>
+			</div>
+			<div id="sort-order">
+				<span class="sa-min-width-4rem">Order:</span>
+				<input type="radio" id="sort-asc" class="w3-radio" name="sortOrder" value="asc" checked>
+				<label for="sort-asc">Ascending</label>
+				<input type="radio" id="sort-desc" class="w3-radio w3-margin-left" name="sortOrder" value="desc">
+				<label for="sort-desc">Descending</label>
+			</div>
+		</form>
+	</div>
+
+	<div class="w3-row"> <!-- Main Todo List -->
+		<div class="w3-col w3-container w3-left sa-width-15"></div> <!-- left/right responsive padding -->
+		<div class="w3-col w3-container w3-right sa-width-15"></div>
+		<ul class="w3-ul w3-padding-16 w3-rest" id="todo-list">
+			
+		</ul>
+	</div>
+	<div class="w3-row w3-margin-bottom"> <!-- Clear All Button, hidden unless there's todo items -->
+		<div class="w3-col w3-container w3-right sa-width-15"></div>
+		<a class="w3-button w3-right w3-theme w3-rest w3-hide" id="btn-clear-all">Clear All</a>	<!-- Only clears items DISPLAYED -->
+	</div>
+	
+	<div class="w3-row w3-bar w3-margin-bottom w3-hide" id="pagination"> <!-- Hidden if no Todo Items -->
+		<div class="w3-col w3-container w3-left sa-width-15"></div> <!-- left/right responsive padding -->
+		<div class="w3-col w3-container w3-right sa-width-15"></div>
+		<a id="btn-previous" class="w3-button w3-theme w3-left w3-margin-right"><i class="fa fa-chevron-left"></i> Previous</a>
+		<div class="w3-dropdown-hover">
+			<a class="w3-button w3-theme-l1">Page Size <i class="fa fa-chevron-down"></i></a>
+			<div class="w3-dropdown-content w3-small w3-bar-block w3-card-4" id="dropdown-page-size">
+			  <a class="w3-bar-item w3-button dropdown-item">All Items</a> <!-- 'dropdown-item' class is just for selecting, not styling-->
+			  <a class="w3-bar-item w3-button dropdown-item">5 Items</a>
+			  <a class="w3-bar-item w3-button dropdown-item">10 Items</a>
+			  <a class="w3-bar-item w3-button dropdown-item">15 Items</a>
+			</div>
+		</div>
+		<span class="w3-bar-item" id="display-num-items">All Items</span>
+		<a id="btn-next" class="w3-button w3-theme w3-right">Next <i class="fa fa-chevron-right"></i></a>
+	</div>
+	<div class="w3-row w3-margin-bottom" id="bottom-padding">
+		<div class="w3-col w3-container sa-height-50px"></div>
+	</div>
+</div>
+<script type="text/javascript" src="../../js/client-util.js"></script>
+<script type="text/javascript" src="../../js/client-app.js"></script>
+</body>
+</html>
+
+{{> footer}}
