@@ -1,5 +1,5 @@
 {
-  "name": "task-manager",
+  "name": "ivna",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,7 +7,7 @@
     "dev": "nodemon src/index.js -e js,hbs"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vitthal Shinde",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -26,5 +26,13 @@
   "devDependencies": {
     "nodemon": "^1.19.4"
   },
-  "description": ""
+  "description": "Intensionally Vulnerable Nodejs Application",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitthalS/ivna.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VitthalS/ivna/issues"
+  },
+  "homepage": "https://github.com/VitthalS/ivna#readme"
 }
