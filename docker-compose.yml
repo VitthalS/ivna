@@ -16,6 +16,7 @@ services:
        mongo:
              container_name: mongo
              image: mongo:latest
+             restart: always
              volumes:
               - ~/mongo:/data/db
              ports:
