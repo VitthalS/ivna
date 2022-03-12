@@ -18,6 +18,6 @@ services:
               - ~/mongo:/data/db
              ports:
                - '27017:27017'
-	     networks:
-	       - ivna-network
+             networks:
+               - ivna-network
 		
