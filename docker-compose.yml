@@ -1,0 +1,18 @@
+version: "3"
+services:
+       login-app:
+           container_name: ivna
+           image: vitthals/ivna
+           restart: always
+           build: .
+           environment:
+              - MONGO_URI=mongodb://mongo:27017/task-manager-api
+           ports:
+             - "8000:8000"
+           depends_on:
+             - mongo
+       mongo:
+             container_name: mongo
+             image: mongo
+             ports:
+               - '27017:27017'
