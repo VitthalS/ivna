@@ -1,5 +1,13 @@
 version: "3"
 services:
+       mongo:
+             container_name: mongo
+             image: mongo:latest
+             restart: always
+             volumes:
+              - ~/mongo:/data/db
+             ports:
+               - '27017:27017'
        ivna:
            container_name: ivna
            image: vitthals/ivna
@@ -13,11 +21,3 @@ services:
              - mongo
            depends_on:
              - mongo
-       mongo:
-             container_name: mongo
-             image: mongo:latest
-             restart: always
-             volumes:
-              - ~/mongo:/data/db
-             ports:
-               - '27017:27017'
