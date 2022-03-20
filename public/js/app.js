@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$("#form").submit(function(e){
         e.preventDefault();
     });
-
+	// https://github.com/VitthalS/ivna
  	$("#submit").on('click', function(){
  		var a = $('#form').serializeArray();
  		var post_data = {};

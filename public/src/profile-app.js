@@ -22,6 +22,7 @@ fetch('/api/v2/profile')
         display(data.user.name, 'name', 'Name')             // Name
     	document.querySelector('#email').innerHTML = `<strong>Email</strong>: ${data.user.email}` // Email
         // Don't display password details for security reasons
+        // https://github.com/VitthalS/ivna
 
     	console.log(data.user)
 	})
