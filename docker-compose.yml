@@ -1,23 +1,22 @@
-version: "3"
+version: "3.9"
 services:
        mongo:
              container_name: mongo
              image: mongo:latest
              restart: always
              volumes:
-              - ~/mongo:/data/db
+              - mongo:/data/db
              ports:
                - '27017:27017'
        ivna:
-           container_name: ivna
-           image: vitthals/ivna
-           restart: always
-           build: .
-           environment:
-              - MONGO_URI=mongodb://mongo:27017/task-manager-api
-           ports:
-             - "8000:8000"
-           links:
+            build: .
+            ports:
+             - 8000:8000
+            environment:
+             - MONGO_URI=mongodb://mongo:27017
+             - DB_NAME=task-manager
+             - PORT:8000
+            depends_on:
              - mongo
-           depends_on:
-             - mongo
+volumes:
+  mongo : {}
