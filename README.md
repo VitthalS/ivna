@@ -38,3 +38,6 @@ The application contains following vulnerabilities
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request.
 
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/VitthalS)
+
