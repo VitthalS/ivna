@@ -13,6 +13,7 @@ The application contains following vulnerabilities
 - [x] Common JWT Secret
 - [x] Excessive Data exposure
 - [x] Broken User Authentication
+- [x] Exposed Database
 - [ ] Mass Assignment
 - [ ] ReDos
 - [ ] NoSQL Injection
