@@ -26,7 +26,7 @@ The application contains following vulnerabilities
     git clone https://github.com/VitthalS/ivna.git
     cd ivna
     docker-compose up -d
-    Visit http://localhost:8000
+    Open http://localhost:8000
 
 
 
