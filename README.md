@@ -1,5 +1,5 @@
 # ivna
-Intensionally Vulnerable Nodejs Application
+Intentionally Vulnerable Nodejs Application
 
 Vulnerable Task Manager Application &amp; APIs build using Nodejs,mongoose.
 
