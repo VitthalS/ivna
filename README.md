@@ -18,3 +18,10 @@ The application contains following vulnerabilities
 - [ ] ReDos
 - [ ] NoSQL Injection
 
+
+## Install
+
+    git clone https://github.com/VitthalS/ivna.git
+    cd ivna
+    docker-compose up -d
+
