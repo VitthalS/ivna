@@ -21,12 +21,14 @@ The application contains following vulnerabilities
 - [ ] NoSQL Injection
 
 
-## Install & Run
+## Install
 
     git clone https://github.com/VitthalS/ivna.git
     cd ivna
-    docker-compose up -d
-    Open http://localhost:8000
+    docker-compose build && docker-compose up
+    
+## Run
+    Open URL in browser http://localhost:8000
 
 
 
