@@ -28,7 +28,8 @@ The application contains following vulnerabilities
     docker-compose build && docker-compose up
     
 ## Run
-    Open URL in browser http://localhost:8000
+   Open URL in browser 
+        http://localhost:8000
 
 
 
