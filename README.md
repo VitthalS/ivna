@@ -64,5 +64,9 @@ The application contains following vulnerabilities
 3. Submit a pull request, I am happy to merge.
 
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/VitthalS)
+## Support
 
+1. [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/VitthalS)
+2. Appreciate on [LinkedIn](https://www.linkedin.com/in/vitthals/)
+3. Share on [Twitter](https://twitter.com/0_1VitthalS/)
+4. Share with your friends who are starting out in cybersecurity and want to learn Web & API testing.
