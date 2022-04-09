@@ -3,9 +3,16 @@ Intentionally Vulnerable Nodejs Application
 
 Vulnerable Task Manager Application &amp; APIs build using Nodejs,mongoose.
 
+
+## Background
+While learning Nodejs I build this task-manager which I then converted to vulnerable CTF like application.
+
+ivna is a real world like application which has known vulnerabilities in the web and APIs which are not distinguised like other vulnerable application, The idea here is to teach how to attack and find out flaws in real-world applications.
+
 Made with ![Love](https://cloud.githubusercontent.com/assets/4301109/16754758/82e3a63c-4813-11e6-9430-6015d98aeaab.png) in India
 
  ![alt text](public/img/back.jpeg)
+ 
 
 The application contains following vulnerabilities
 
