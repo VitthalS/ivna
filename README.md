@@ -34,6 +34,7 @@ The application contains following vulnerabilities
 - OpenAPI support
 - Documentation on vulnerabilities
 - Postman collection on APIs
+- More vulnerabilities.
 
 
 ## Install
