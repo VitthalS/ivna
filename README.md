@@ -29,6 +29,12 @@ The application contains following vulnerabilities
 - [ ] ReDos
 - [ ] NoSQL Injection
 
+## ToDo
+
+- OpenAPI support
+- Documentation on vulnerabilities
+- Postman collection on APIs
+
 
 ## Install
 
