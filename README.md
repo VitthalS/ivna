@@ -70,3 +70,8 @@ The application contains following vulnerabilities
 2. Appreciate on [LinkedIn](https://www.linkedin.com/in/vitthals/)
 3. Share on [Twitter](https://twitter.com/0_1VitthalS/)
 4. Share with your friends who are starting out in cybersecurity and want to learn Web & API testing.
+
+
+## Presented at
+
+1. [APIsecure](https://apisecure.co/)
